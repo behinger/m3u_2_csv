@@ -24,4 +24,6 @@ This program loops over the audio files from the m3u-playlist and reads their ID
 - album
 
 ### 
+The compiled files have been compiled using pyinstaller (-F)
+
 This tool only works if you have read-access to the audio files.
