@@ -14,7 +14,7 @@
   
   Run `./m3u2csv` (in ubuntu)
   
-  Run `./m3u2csv` (in mac OS X)
+  Run `./m3u2csv` (in mac OS X) from the *terminal*. If you simply double-click it won't work (no idea why, also not a mac expert)
   
 ### What does it do?
 This program loops over the audio files from the m3u-playlist and reads their ID3-Tags. It then concatenates some of them to a csv file. Currently the following tags are saved:
@@ -25,7 +25,9 @@ This program loops over the audio files from the m3u-playlist and reads their ID
 - year
 - album
 
-### 
+### Etc.
 The compiled files have been compiled using pyinstaller (-F)
 
 This tool only works if you have read-access to the audio files.
+
+M3Us are not really standardized, so some programs might export the M3U differently. Please write me and I will try to fix it.
