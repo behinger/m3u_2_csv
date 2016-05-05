@@ -39,7 +39,7 @@ def parse_m3u_musicbee(infile,encoding="auto"):
             # if we find a line with #extinf we skip :)
             if "#EXTINF" in line:
                 continue
-                    
+            line=line.replace("file://","")      
             playlist.append(line)
     
         inf.close()
