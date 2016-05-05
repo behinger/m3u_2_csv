@@ -132,12 +132,29 @@ def parse_path_list(playlist):
             
     df["number"]=list(range(len(df["artist"])))
     return df
-    
+
+
+def get_path(wildcard):
+        import wx
+        app = wx.App(None)
+        style = wx.FD_OPEN | wx.FD_FILE_MUST_EXIST | wx.FD_MULTIPLE
+        dialog = wx.FileDialog(None, 'Open', wildcard=wildcard, style=style)
+       
+        if dialog.ShowModal() == wx.ID_OK:
+            path = dialog.GetPaths()
+        else:
+            path = None
+        dialog.Destroy()
+        return path    
 try:
+    
+
+    
+    allPlaylists = get_path('*.m3u')
     #from tkinter import filedialog
     #allPlaylists = filedialog.askopenfilenames(defaultextension="m3u")
-    import easygui
-    allPlaylists = easygui.fileopenbox(default="*.m3u",filetypes=["*.m3u"],multiple=True)
+#    import easygui
+#    allPlaylists = easygui.fileopenbox(default="*.m3u",filetypes=["*.m3u"],multiple=True)
     #allPlaylists = glob(r'./m3u/*.m3u')
     df = dict(artist=[],title=[],genre=[],length=[],year=[],album=[],origName=[],identification=[],number=[])
     text = 'Trying to read %d playlist(s) \n' %len(allPlaylists)
