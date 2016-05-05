@@ -134,7 +134,9 @@ def parse_path_list(playlist):
     return df
     
 try:
-    allPlaylists = glob(r'./m3u/*.m3u')
+    from tkinter import filedialog
+    allPlaylists = filedialog.askopenfilenames(defaultextension="m3u")
+    #allPlaylists = glob(r'./m3u/*.m3u')
     df = dict(artist=[],title=[],genre=[],length=[],year=[],album=[],origName=[],identification=[],number=[])
     text = 'Trying to read %d playlist(s) \n' %len(allPlaylists)
     print(text)
