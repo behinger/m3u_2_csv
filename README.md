@@ -27,3 +27,7 @@ The compiled files have been compiled using pyinstaller (-F)
 This tool only works if you have read-access to the audio files.
 
 M3Us are not really standardized, so some programs might export the M3U differently. Please write me and I will try to fix it.
+
+
+- Why is the binary so large?
+wxPython takes up a lot of space. Without this library only 4mb are needed (instead of 20). I would love to use tkinter (which results in ~8mb) but currently there is a bug in MacOSX that prohibits TK + pyinstaller to work correctly
