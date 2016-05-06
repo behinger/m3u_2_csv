@@ -5,9 +5,9 @@
 ### tutorial
   Run the `m3u2csv.exe` (in windows)
   
-  Run `./m3u2csv` (in ubuntu)
+  Run `./m3u2csv_linux` (in ubuntu)
   
-  Run `./m3u2csv` (in mac OS X)
+  Run `./m3u2csv_mac` (in mac OS X)
 
   
   -> Select all .m3u files you want to export to a csv file
